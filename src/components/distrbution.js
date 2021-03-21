@@ -14,7 +14,7 @@ const DistributionContainer = styled.div`
   justify-content: center;
   text-align: center;
   background: rgb(228,0,0);
-background: linear-gradient(70deg, rgba(228,0,0,1) 0%, rgba(253,125,8,1) 100%);
+background: linear-gradient(70deg, #d51111 0%, rgba(253,125,8,1) 100%);
 `
 
 const Container = styled.div`

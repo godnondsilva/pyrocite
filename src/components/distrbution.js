@@ -11,6 +11,8 @@ const DistributionContainer = styled.div`
   width: 100%;
   padding: 150px 0;
   display: flex;
+  position: relative;
+  z-index: 5;
   justify-content: center;
   text-align: center;
   background: rgb(213,17,17);

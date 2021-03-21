@@ -3,11 +3,12 @@ import './App.css';
 
 // Components
 import Header from "./components/header";
-import Jumbotron from "./components/jumbotron";
+
 import Distribution from './components/distrbution';
-import Services from './components/services';
 import Verified from './components/verified';
 import Footer from './components/footer';
+
+import HomeParticles from './containers/home-particles';
 
 import {
   BrowserRouter as Router,
@@ -22,8 +23,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Header />
-            <Jumbotron />
-            <Services />
+            <HomeParticles />
             <Distribution />
             <Verified />
             <Footer />

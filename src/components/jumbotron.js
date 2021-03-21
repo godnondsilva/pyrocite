@@ -10,6 +10,8 @@ const JumbotronContainer = styled.div`
     @media (max-width: 768px) {
         padding: 200px 0 0 0;
     }
+    position: relative;
+    z-index: 2;
 `
 
 const Container = styled.div`

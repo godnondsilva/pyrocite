@@ -20,7 +20,7 @@ const Navigation = styled.nav`
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 10vw;
-  z-index: 2;
+  z-index: 4;
   align-self: center;
   position: fixed;
   // position: relative; // If you want the header to be stuck to the top

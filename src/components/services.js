@@ -80,7 +80,7 @@ const Service = () => {
             <ItemContainer>
                 <Image src={Dex} />
                 <Title>PYROC Dex</Title>
-                <Subtitle>The decentralized exchange operates via the Ethereum blockchain to facilitate safe and secure transactions.</Subtitle>
+                <Subtitle>The decentralized exchange operates via the Binance Smart Chain to facilitate safe and secure transactions.</Subtitle>
             </ItemContainer>
             <ItemContainer>
                 <Image src={Up} />

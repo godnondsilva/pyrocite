@@ -8,13 +8,13 @@ import SocialLinks from "../data/social-links.data";
 import mapImage from "../assets/map.svg";
 
 const DistributionContainer = styled.div`
-    width: 100%;
-    padding: 150px 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background: rgb(163,0,0);
-    background: linear-gradient(70deg, rgba(163,0,0,1) 0%, rgba(253,125,8,1) 100%);
+  width: 100%;
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: rgb(228,0,0);
+background: linear-gradient(70deg, rgba(228,0,0,1) 0%, rgba(253,125,8,1) 100%);
 `
 
 const Container = styled.div`

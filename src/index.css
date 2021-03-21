@@ -19,10 +19,10 @@ body {
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #fd7d08;
+  background: rgb(213,17,17);
   box-shadow: 0 0 4px #000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background:	#fd7d08;
+  background:	rgb(213,17,17);
 }

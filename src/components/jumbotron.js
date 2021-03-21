@@ -44,8 +44,8 @@ justify-content: center;
 
 const GoToWallet = styled.div`
 margin: 0 10px;
-background: rgb(163,0,0);
-background: linear-gradient(70deg, rgba(163,0,0,0.9) 0%, rgba(253,125,8,0.9) 100%);
+background: rgb(213,17,17);
+background: linear-gradient(90deg, rgba(213,17,17,1) 0%, rgba(196,47,10,1) 63%, rgba(196,73,10,1) 100%);
 
 padding: 10px 15px;
 border-radius: 4px;

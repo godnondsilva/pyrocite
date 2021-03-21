@@ -35,7 +35,7 @@ const Subtitle = styled.div`
 `
 
 const Color = styled.span`
-  color: #fd7d08;
+  color: #fd3708;
 `
 
 const Footer = () => {

@@ -13,8 +13,8 @@ const DistributionContainer = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  background: rgb(228,0,0);
-background: linear-gradient(70deg, #d51111 0%, rgba(253,125,8,1) 100%);
+  background: rgb(213,17,17);
+  background: linear-gradient(90deg, rgba(213,17,17,1) 0%, rgba(196,47,10,1) 63%, rgba(196,73,10,1) 100%);
 `
 
 const Container = styled.div`
@@ -32,10 +32,11 @@ const IconData = styled.a`
 
 const FontAwesomeIconContainer = styled(FontAwesomeIcon)`
   color: #ddd;
-  :hover {
-    color: #fff;
-  }
-  transition: all ease 300ms;
+  transform: translateY(2px);
+  transition: all ease 200ms;
+:hover {
+    transform: translateY(-5px);
+}
 `
 
 const Title = styled.div`
@@ -65,6 +66,7 @@ const MapImage = styled.img`
 const Distribution = () => {
   return (
     <DistributionContainer>
+        <MapImage src={mapImage} />
         <Container>
             <IconContainer>
                 <IconData href={`mailto:${SocialLinks.Email}`}>
@@ -77,7 +79,6 @@ const Distribution = () => {
             <Title>We are distributed</Title>
             <Subtitle>We take pride in the project and community. We want to provide the best experience and platform possible.</Subtitle>
         </Container>
-        <MapImage src={mapImage} />
     </DistributionContainer>
   )
 }

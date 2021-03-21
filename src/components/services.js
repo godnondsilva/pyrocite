@@ -1,7 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import PyrocIcons from "../assets/pyroc_icons.png";
+import Rocket from "../assets/rocket.png"
+import Dex from "../assets/dex.png"
+import Up from "../assets/up.png"
+import Airdrop from "../assets/airdrop.png"
+import Roadmap from "../assets/roadmap.png"
 
 const ServicesContainer = styled.div`
     width: 100%;
@@ -23,8 +28,11 @@ const Container = styled.div`
 
 const ItemContainer = styled.div`
     width: 300px;
-    margin: 0 50px;
-    margin-bottom: 30px;
+    margin: 20px 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @media (max-width: 768px) {
         margin: 0;
         margin-top: 50px;
@@ -50,8 +58,9 @@ const Subtitle = styled.div`
   }
 `
 
-const FontAwesomeIconContainer = styled(FontAwesomeIcon)`
-    color: #fd7d08;
+const Image = styled.img`
+    width: 70px;
+    height: 70px;
 `
 
 const Service = () => {
@@ -59,32 +68,32 @@ const Service = () => {
     <ServicesContainer>
         <Container>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />
+                <Image src={PyrocIcons} />
                 <Title>Staking Earnings</Title>
                 <Subtitle>Holders earn rewards generated through network activity and can reedeem or stake their new PYROC.</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "discord"]} size="3x" />
+                <Image src={Rocket} />
                 <Title>Built for Value</Title>
                 <Subtitle>PYROC is a token with the added utility of being both transparently staked and burned at a 10% rate.</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />
+                <Image src={Dex} />
                 <Title>PYROC Dex</Title>
                 <Subtitle>The decentralized exchange operates via the Ethereum blockchain to facilitate safe and secure transactions.</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "discord"]} size="3x" />
+                <Image src={Up} />
                 <Title>dApp Development</Title>
                 <Subtitle>A series of Web 3.0 dApps can utilize PYROC Tokens. Developers are welcome to build upon the infrastructure.</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />
+                <Image src={Airdrop} />
                 <Title>Stake Drops</Title>
                 <Subtitle>PYROC will be partially distributed via a series of drops via Discord, Telegram and Twitter and community events.</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <FontAwesomeIconContainer icon={["fab", "discord"]} size="3x" />
+                <Image src={Roadmap} />
                 <Title>Roadmap</Title>
                 <Subtitle>As PYROC grows, be on the lookout for updates to the roadmap regarding the progression of the project.</Subtitle>
             </ItemContainer>

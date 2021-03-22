@@ -239,6 +239,11 @@ const Header = () => {
               </Link>
             </div>
           )}))}
+          <Link>
+                <NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
+                Connect to Wallet
+                </NavItem>
+            </Link>
           <IconContainer>
                 <IconData href={SocialLinks.Discord}>
                     <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
@@ -262,6 +267,11 @@ const Header = () => {
                 </Link>
               </div>
             )))}
+            <Link>
+              <NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
+                  Connect to Wallet
+              </NavItem>
+            </Link>
             <IconContainer>
                 <IconData href={SocialLinks.Discord}>
                     <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />

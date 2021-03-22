@@ -253,7 +253,6 @@ const Header = () => {
                 </IconData>
             </IconContainer>
         </Navbox>
-
       ) : (
           // Desktop mode
           <Navbox open>

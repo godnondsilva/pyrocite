@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 // Data for navigation pulled from data/links.js
 import navigationLinks from "../data/navigation-links.data"
@@ -16,11 +16,11 @@ library.add(faDiscord, faTelegram)
 const Navigation = styled.nav`
   height: 8vh;
   display: flex;
-  background-color: #111;
+  background-color: #090909;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 10vw;
-  z-index: 4;
+  z-index: 10;
   align-self: center;
   position: fixed;
   // position: relative; // If you want the header to be stuck to the top
@@ -35,15 +35,6 @@ const Navigation = styled.nav`
     -webkit-filter: none;
     filter: none;
   }
-  animation: fadeInAnimation ease 1.5s forwards; 
-  @keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-    } 
-  } 
 `
 
 const Title = styled.div`
@@ -157,6 +148,14 @@ const NavItem = styled.span`
     }
   }
 
+  ${(props) => props.isOnPage ? `
+  @media(min-width: 768px) {
+    ::after {
+      width: 100%;
+    }
+  }
+  ` : ''}
+
   @media (max-width: 768px) {
     padding: 20px 0;
     font-size: 1.2rem;
@@ -210,6 +209,7 @@ const FontAwesomeIconContainer = styled(FontAwesomeIcon)`
 `
 
 const Header = () => {
+  let location = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Navigation>
@@ -229,21 +229,22 @@ const Header = () => {
       {navbarOpen ? (
         // Mobile mode
         <Navbox>
-          {(navigationLinks.map((link, i) => (
+          {(navigationLinks.map((link, i) => {
+          return(
             <div key={i}>
               <Link to={link.url}>
-                <NavItem key={i} onClick={() => setNavbarOpen(!navbarOpen)}>
+                <NavItem isOnPage={link.url===location.pathname} key={i} onClick={() => setNavbarOpen(!navbarOpen)}>
                   {link.title}
                 </NavItem>
               </Link>
             </div>
-          )))}
+          )}))}
           <IconContainer>
                 <IconData href={SocialLinks.Discord}>
-                    <FontAwesomeIconContainer icon={["fab", "discord"]} size="1x" />
+                    <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>
-                    <FontAwesomeIconContainer icon={["fab", "telegram"]} size="1x" />
+                    <FontAwesomeIconContainer icon={["fab", "telegram"]} size="2x" />
                 </IconData>
             </IconContainer>
         </Navbox>
@@ -255,17 +256,17 @@ const Header = () => {
             (navigationLinks.map((link, i) => (
               <div key={i}>
                 <Link to={link.url}>
-                  <NavItem key={i} onClick={() => setNavbarOpen(!navbarOpen)}>
+                  <NavItem isOnPage={link.url===location.pathname} key={i} onClick={() => setNavbarOpen(!navbarOpen)}>
                     {link.title}
                   </NavItem>
                 </Link>
               </div>
             )))}
             <IconContainer>
-                <IconData href={`mailto:${SocialLinks.Email}`}>
+                <IconData href={SocialLinks.Discord}>
                     <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
                 </IconData>
-                <IconData href={SocialLinks.Github}>
+                <IconData href={SocialLinks.Telegram}>
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="2x" />
                 </IconData>
             </IconContainer>

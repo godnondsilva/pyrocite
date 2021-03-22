@@ -67,14 +67,14 @@ const MapImage = styled.img`
 
 const Distribution = () => {
   return (
-    <DistributionContainer>
+    <DistributionContainer id="distribution">
         <MapImage src={mapImage} />
         <Container>
             <IconContainer>
-                <IconData href={`mailto:${SocialLinks.Email}`}>
+                <IconData href={SocialLinks.Discord}>
                     <FontAwesomeIconContainer icon={["fab", "discord"]} size="3x" />
                 </IconData>
-                <IconData href={SocialLinks.Github}>
+                <IconData href={SocialLinks.Telegram}>
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />
                 </IconData>
             </IconContainer>

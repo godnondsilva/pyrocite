@@ -8,7 +8,7 @@ const FooterContainer = styled.div`
     justify-content: center;
     text-align: center;
     border-top: 1px solid #333;
-    background-color: #111;
+    background-color: #090909;
 `
 
 const Container = styled.div`

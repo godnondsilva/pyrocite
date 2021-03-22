@@ -1,17 +1,19 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
+import { Link as ScrollTo } from "react-scroll"
 
 const JumbotronContainer = styled.div`
-    width: 100%;
-    padding: 200px 0 50px 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    @media (max-width: 768px) {
-        padding: 200px 0 0 0;
-    }
-    position: relative;
-    z-index: 2;
+  width: 100%;
+  padding: 200px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 768px) {
+      padding: 200px 0 0 0;
+  }
+  position: relative;
+  z-index: 2;
 `
 
 const Container = styled.div`
@@ -39,35 +41,37 @@ const Subtitle = styled.div`
 `
 
 const FlexContainer = styled.div`
-margin-top: 20px;
-display: flex;
-justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 `
 
-const GoToWallet = styled.div`
-margin: 0 10px;
-background: rgb(213,17,17);
-background: linear-gradient(90deg, rgba(213,17,17,1) 0%, rgba(196,47,10,1) 63%, rgba(196,73,10,1) 100%);
+const GoToWallet = styled(Link)`
+  margin: 0 10px;
+  color: #ddd;
+  text-decoration: none;
+  background: rgb(213,17,17);
+  background: linear-gradient(90deg, rgba(213,17,17,1) 0%, rgba(196,47,10,1) 63%, rgba(196,73,10,1) 100%);
 
-padding: 10px 15px;
-border-radius: 4px;
-cursor: pointer;
-transition: all ease 200ms;
-:hover {
-    transform: translateY(-5px);
-}
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all ease 200ms;
+  :hover {
+      transform: translateY(-5px);
+  }
 `
 
-const LearnMore = styled.div`
-margin: 0 10px;
-padding: 10px 15px;
-border-radius: 4px;
-border: 1px solid #ddd;
-cursor: pointer;
-transition: all ease 200ms;
-:hover {
-    transform: translateY(-5px);
-}
+const LearnMore = styled(ScrollTo)`
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all ease 200ms;
+  :hover {
+      transform: translateY(-5px);
+  }
 `
 
 const Jumbotron = () => {
@@ -77,8 +81,8 @@ const Jumbotron = () => {
             <Title>Welcome to Pyrocite!</Title>
             <Subtitle>PYROC is the first variable length deflationary staking platform.</Subtitle>
             <FlexContainer>
-                <GoToWallet>Go to wallet</GoToWallet>
-                <LearnMore>Learn More</LearnMore>
+                <GoToWallet to="/wallet">Go to wallet</GoToWallet>
+                <LearnMore to="distribution" smooth={true} duration={1000} offset={-100}>Learn More</LearnMore>
             </FlexContainer>
         </Container>
     </JumbotronContainer>

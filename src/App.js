@@ -3,12 +3,11 @@ import './App.css';
 
 // Components
 import Header from "./components/header";
-
-import Distribution from './components/distrbution';
-import Verified from './components/verified';
 import Footer from './components/footer';
 
-import HomeParticles from './containers/home-particles';
+// Containers
+import Home from './containers/home';
+import Wallet from './containers/wallet';
 
 import {
   BrowserRouter as Router,
@@ -23,14 +22,13 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Header />
-            <HomeParticles />
-            <Distribution />
-            <Verified />
+            <Home />
             <Footer />
           </Route>
-          <Route path="/contact">
+          <Route path="/wallet">
             <Header />
-            {/* <ContactPage /> */}
+            <Wallet />
+            <Footer />
           </Route>
         </Switch>
       </Router>

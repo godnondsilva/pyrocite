@@ -9,7 +9,6 @@ const NavigationLinks = [
     },
     {
         title: "More",
-        url: "/more",
     },
 ]
 

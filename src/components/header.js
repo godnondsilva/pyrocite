@@ -266,7 +266,7 @@ const Header = () => {
                   </NavItem>
                 </Link>
               </div>
-            )))}
+            )))} 
             <Link>
               <NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
                   Connect to Wallet

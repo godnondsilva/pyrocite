@@ -471,14 +471,14 @@ class App extends React.Component {
           document.getElementById("totalCirculating").innerHTML = totalFrozen.toFixed(0);
         }
       })
-      contract.methods.dividendsOf(account).call({from: account, gas: 210000}).then(function(e){
-        if (e) {
-            var stakeTokenClaim = e/1000000;
-            stakeTokenClaim = stakeTokenClaim/1000000;
-            stakeTokenClaim = stakeTokenClaim/1000000;
-          // document.getElementById("dividendsAmount").innerHTML = stakeTokenClaim.toFixed(0);
-        }
-      })
+      // contract.methods.dividendsOf(account).call({from: account, gas: 210000}).then(function(e){
+      //   if (e) {
+      //       var stakeTokenClaim = e/1000000;
+      //       stakeTokenClaim = stakeTokenClaim/1000000;
+      //       stakeTokenClaim = stakeTokenClaim/1000000;
+      //     // document.getElementById("dividendsAmount").innerHTML = stakeTokenClaim.toFixed(0);
+      //   }
+      // })
     
     })()
   });

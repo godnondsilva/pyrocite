@@ -98,7 +98,7 @@ const RightTitle = styled.div`
 const RightSubtitle = styled.div`
   color: #ddd;
   font-size: 1.25rem;
-  padding-top: 6px;
+  padding-top: 10px;
   opacity: 0.9;
   @media (max-width: 768px) {
     font-size: 1.1rem;
@@ -136,25 +136,25 @@ const UpperWallet = () => {
                 <Title>Your PYROC Wallet</Title>
                 <Subtitle>Manage your current holdings and stake to earn more PYROC</Subtitle>
                 <Contract>Verified PYROC Contract:</Contract>
-                <ContractAddress>0xd0f6e96abfe9d41ee104a72b8f51f4ffaa90d378</ContractAddress>
-            
+                <ContractAddress>0xd0f6e96abfe9d41ee104a72b8f51f4ffaa90d378</ContractAddress>          
             </LeftContainer>
             <RightContainer>
                 <RightTitle>Your PYROC Tokens</RightTitle>
-                <RightSubtitle>-</RightSubtitle>
+                <RightSubtitle id="tokenBalance">-</RightSubtitle>
+                {/* <RightSubtitle id="totalValue">-</RightSubtitle> */}
             </RightContainer>
         </InnerUpperContainer>
         <FlexContainer>
             <ItemContainer>
-                <Title>-</Title>
+                <Title id="totalCirculating">-</Title>
                 <Subtitle>Circulating PYROC</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <Title>-</Title>
+                <Title id="totalStakedPYROC">-</Title>
                 <Subtitle>Total Staked PYROC</Subtitle>
             </ItemContainer>
             <ItemContainer>
-                <Title>-</Title>
+                <Title id="totalFrozenAmount">-</Title>
                 <Subtitle>Your Staked PYROC</Subtitle>
             </ItemContainer>
         </FlexContainer>

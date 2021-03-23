@@ -7,9 +7,6 @@ const NavigationLinks = [
         title: "Wallet",
         url: "/wallet",
     },
-    {
-        title: "More",
-    },
 ]
 
 export default NavigationLinks;

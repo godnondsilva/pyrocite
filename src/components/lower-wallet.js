@@ -33,6 +33,9 @@ const ItemContainer = styled.div`
 const LowerWallet = () => {
   return (
     <LowerWalletContainer>
+      <FlexContainer>
+        <ItemContainer></ItemContainer>
+      </FlexContainer>
     </LowerWalletContainer>
   )
 }

@@ -81,7 +81,7 @@ const Jumbotron = () => {
             <Title>Welcome to Pyrocite!</Title>
             <Subtitle>PYROC is the first variable length deflationary staking platform.</Subtitle>
             <FlexContainer>
-                <GoToWallet to="/wallet">Go to wallet</GoToWallet>
+                <GoToWallet to="/wallet">Go to Wallet</GoToWallet>
                 <LearnMore to="distribution" smooth={true} duration={1000} offset={-100}>Learn More</LearnMore>
             </FlexContainer>
         </Container>

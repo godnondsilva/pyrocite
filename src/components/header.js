@@ -150,14 +150,29 @@ const NavItem = styled.span`
 
   ${(props) => props.isOnPage ? `
   @media(min-width: 768px) {
-    ::after {
+    :after {
       width: 100%;
     }
   }
   ` : ''}
 
+  ${(props) => props.dontShow ? `
+  font-weight: 500;
+  background: #fd3708;
+  background: linear-gradient(90deg, rgba(213,17,17,1) 0%, rgba(196,47,10,1) 63%, rgba(196,73,10,1) 100%);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #ddd;
+  :after {
+    display: none;
+  }
+  :hover {
+    color: #fff;
+  }
+  ` : ''}
+
   @media (max-width: 768px) {
-    padding: 20px 0;
+    padding: 20px 30px;
     font-size: 1.2rem;
     z-index: 6;
     :hover {
@@ -208,7 +223,7 @@ const FontAwesomeIconContainer = styled(FontAwesomeIcon)`
   transition: all ease 300ms;
 `
 
-const Header = () => {
+const Header = ({ loadWeb3 }) => {
   let location = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
@@ -239,9 +254,9 @@ const Header = () => {
               </Link>
             </div>
           )}))}
-          <Link>
-                <NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
-                Connect to Wallet
+          <Link to="/wallet">
+                <NavItem id="button-change"dontShow={true} onClick={() => {setNavbarOpen(!navbarOpen); loadWeb3();  } }>
+                Connect to MetaMask
                 </NavItem>
             </Link>
           <IconContainer>
@@ -266,9 +281,9 @@ const Header = () => {
                 </Link>
               </div>
             )))} 
-            <Link>
-              <NavItem onClick={() => setNavbarOpen(!navbarOpen)}>
-                  Connect to Wallet
+            <Link to="/wallet" >
+              <NavItem id="button-change" dontShow={true} onClick={() => {setNavbarOpen(!navbarOpen); loadWeb3()}}>
+                Connect to MetaMask
               </NavItem>
             </Link>
             <IconContainer>

@@ -70,7 +70,7 @@ const Service = () => {
             <ItemContainer>
                 <Image src={PyrocIcons} />
                 <Title>Staking Earnings</Title>
-                <Subtitle>Holders earn rewards generated through network activity and can reedeem or stake their new PYROC.</Subtitle>
+                <Subtitle>Holders earn rewards generated through network activity and can reedeem or stake their new PYROC. Network transaction fee is 10%(5% is burned, 5% to staked users)</Subtitle>
             </ItemContainer>
             <ItemContainer>
                 <Image src={Rocket} />
@@ -89,8 +89,8 @@ const Service = () => {
             </ItemContainer>
             <ItemContainer>
                 <Image src={Airdrop} />
-                <Title>Stake Drops</Title>
-                <Subtitle>PYROC will be partially distributed via a series of drops via Discord, Telegram and Twitter and community events.</Subtitle>
+                <Title>Airdrops</Title>
+                <Subtitle>PYROC & additional reward token(s) will be partially distrbuted to staked users once the platform is running full speed.</Subtitle>
             </ItemContainer>
             <ItemContainer>
                 <Image src={Roadmap} />

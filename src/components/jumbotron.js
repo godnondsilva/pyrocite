@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import { Link as ScrollTo } from "react-scroll"
 
 const JumbotronContainer = styled.div`
   width: 100%;
@@ -62,12 +61,14 @@ const GoToWallet = styled(Link)`
   }
 `
 
-const LearnMore = styled(ScrollTo)`
+const LearnMore = styled.a`
   margin: 0 10px;
   padding: 10px 15px;
   border-radius: 4px;
   border: 1px solid #ddd;
   cursor: pointer;
+  text-decoration: none;
+  color #ddd;
   transition: all ease 200ms;
   :hover {
       transform: translateY(-5px);
@@ -78,11 +79,11 @@ const Jumbotron = () => {
   return (
     <JumbotronContainer>
         <Container>
-            <Title>Welcome to Pyrocite!</Title>
+            <Title>Welcome to Pyroclastic!</Title>
             <Subtitle>PYROC is the first variable length deflationary staking platform.</Subtitle>
             <FlexContainer>
                 <GoToWallet to="/wallet">Go to Wallet</GoToWallet>
-                <LearnMore to="distribution" smooth={true} duration={1000} offset={-100}>Learn More</LearnMore>
+                <LearnMore href="https://exchange.pancakeswap.finance/#/swap">Buy now</LearnMore>
             </FlexContainer>
         </Container>
     </JumbotronContainer>

@@ -11,6 +11,8 @@ import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons"
 
 import SocialLinks from "../data/social-links.data";
 
+import Pyroc from "../assets/pyroc.png"
+
 library.add(faDiscord, faTelegram)
 
 const Navigation = styled.nav`
@@ -191,6 +193,13 @@ const LinkContainer = styled(Link)`
   :hover {
       color: #fd3708;
   }
+  display: flex;
+  align-items: center;
+`
+
+const Image = styled.img`
+  width: 60px;
+  height: 55px;
 `
 
 const IconContainer = styled.div`
@@ -231,7 +240,8 @@ const Header = ({ loadWeb3 }) => {
       <TitleContainer>
         <Title>
             <LinkContainer to="/">
-              Pyrocite
+              <Image src={Pyroc} />
+              Pyroclastic
             </LinkContainer>
         </Title>
       </TitleContainer>

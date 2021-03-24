@@ -69,6 +69,10 @@ const Button = styled.a`
   margin-top: ${(props) => props.whitepaper ? '20px' : ''};
   padding: ${(props) => props.whitepaper ? '10px 60px' : '10px 0'};
   margin-left: ${(props) => props.whitepaper ? '10px' : ''};
+
+  @media (max-width: 768px) {
+    padding: ${(props) => props.whitepaper ? '10px 40px' : '10px 0'};
+  }
 `
 
 const LeftContainer = styled.div`

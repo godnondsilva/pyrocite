@@ -273,7 +273,7 @@ const Header = () => {
             </Link>
           <IconContainer>
                 <IconData href={SocialLinks.Twitter}>
-                    <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
+                    <FontAwesomeIconContainer icon={["fab", "twitter"]} size="2x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="2x" />
@@ -299,7 +299,7 @@ const Header = () => {
               </NavItem>
             </Link>
             <IconContainer>
-                <IconData href={SocialLinks.Discord}>
+                <IconData href={SocialLinks.Twitter}>
                     <FontAwesomeIconContainer icon={["fab", "twitter"]} size="2x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>

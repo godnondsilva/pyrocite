@@ -71,8 +71,8 @@ const Distribution = () => {
         <MapImage src={mapImage} />
         <Container>
             <IconContainer>
-                <IconData href={SocialLinks.Discord}>
-                    <FontAwesomeIconContainer icon={["fab", "discord"]} size="3x" />
+                <IconData href={SocialLinks.Twitter}>
+                    <FontAwesomeIconContainer icon={["fab", "twitter"]} size="3x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />

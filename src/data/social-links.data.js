@@ -1,5 +1,5 @@
 const SocialLinks = {
-    Discord: 'https://discord.com',
+    Twitter: 'https://twitter.com',
     Telegram: 'https://telegram.com',
 }
 

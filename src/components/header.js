@@ -7,7 +7,7 @@ import navigationLinks from "../data/navigation-links.data"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faDiscord, faTelegram } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faTelegram } from "@fortawesome/free-brands-svg-icons"
 
 import SocialLinks from "../data/social-links.data";
 
@@ -15,7 +15,7 @@ import Pyroc from "../assets/pyroc.png"
 
 import { loadWeb3 } from "../data/web3.data";
 
-library.add(faDiscord, faTelegram)
+library.add(faTelegram, faTwitter)
 
 const Navigation = styled.nav`
   height: 8vh;
@@ -272,7 +272,7 @@ const Header = () => {
               </NavItem>
             </Link>
           <IconContainer>
-                <IconData href={SocialLinks.Discord}>
+                <IconData href={SocialLinks.Twitter}>
                     <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>
@@ -300,7 +300,7 @@ const Header = () => {
             </Link>
             <IconContainer>
                 <IconData href={SocialLinks.Discord}>
-                    <FontAwesomeIconContainer icon={["fab", "discord"]} size="2x" />
+                    <FontAwesomeIconContainer icon={["fab", "twitter"]} size="2x" />
                 </IconData>
                 <IconData href={SocialLinks.Telegram}>
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="2x" />

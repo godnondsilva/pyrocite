@@ -13,6 +13,8 @@ import SocialLinks from "../data/social-links.data";
 
 import Pyroc from "../assets/pyroc.png"
 
+import { loadWeb3 } from "../data/web3.data";
+
 library.add(faDiscord, faTelegram)
 
 const Navigation = styled.nav`
@@ -232,7 +234,7 @@ const FontAwesomeIconContainer = styled(FontAwesomeIcon)`
   transition: all ease 300ms;
 `
 
-const Header = ({ loadWeb3 }) => {
+const Header = () => {
   let location = useLocation();
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
@@ -264,10 +266,10 @@ const Header = ({ loadWeb3 }) => {
               </Link>
             </div>
           )}))}
-          <Link to="/wallet">
-                <NavItem id="button-change"dontShow={true} onClick={() => {setNavbarOpen(!navbarOpen); loadWeb3();  } }>
+            <Link to="/wallet">
+              <NavItem id="button-change"dontShow={true} onClick={() => {setNavbarOpen(!navbarOpen); loadWeb3();  } }>
                 Connect to MetaMask
-                </NavItem>
+              </NavItem>
             </Link>
           <IconContainer>
                 <IconData href={SocialLinks.Discord}>

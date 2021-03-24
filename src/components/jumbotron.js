@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const JumbotronContainer = styled.div`
   width: 100%;
-  padding: 200px 0 50px 0;
+  padding: 200px 0 0 0;
   display: flex;
   justify-content: center;
   text-align: center;

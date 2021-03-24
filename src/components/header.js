@@ -198,8 +198,8 @@ const LinkContainer = styled(Link)`
 `
 
 const Image = styled.img`
-  width: 60px;
-  height: 55px;
+  width: 70px;
+  height: 65px;
 `
 
 const IconContainer = styled.div`

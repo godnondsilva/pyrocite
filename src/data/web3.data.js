@@ -37,7 +37,7 @@ export async function loadWeb3() {
     
   await web3.eth.getAccounts(function (err, accounts) {
     if (err != null) {
-      alert("Error retrieving accounts.");
+      alert("Error retrieving accounts. You need MetaMask to load your wallet.");
       return;
     }
     if (accounts.length === 0) {
@@ -52,9 +52,9 @@ export async function loadWeb3() {
 
     window.onload = getData()
   });
-  }
+}
 
-  export async function getData() {
+export async function getData() {
     var abi = [
       {
         inputs: [],
@@ -413,7 +413,6 @@ export async function loadWeb3() {
     var tokenAmount;
     var contractAddress = "0xd0F6E96aBfE9D41EE104A72B8F51F4ffaA90d378";
     contract = new web3.eth.Contract(abi, contractAddress);
-    console.log("Console :" + contract);
     personalAccount = web3.eth.personal.defaultAccount;
     contract.methods.balanceOf(personalAccount).call({ from: personalAccount}).then(function(e){
       if (e) {
@@ -464,13 +463,13 @@ export async function loadWeb3() {
 
 export function stakeAmount(){
     var stakeAmount = document.getElementById("stakeAmount").value;
-    if(stakeAmount.length === 0) {
+    if(stakeAmount.length <= 2) {
         return alert("Minimum tokens has to be 100")
     }
     console.log(stakeAmount);
     contract.methods.freeze(web3.utils.toWei(stakeAmount)).send({from: personalAccount}).then(function(tx){
       if(tx){
-        alert("Successfully Staked!\nTransaction Hash: " + tx);
+        alert("Successfully Staked!\nTransaction Hash: " + tx.transactionHash);
       }
     }).catch((err)=>{
       alert("Transaction Failed!")
@@ -483,9 +482,10 @@ export function UnstakeAmount(){
         return alert("Please enter an amount!")
     }
     contract.methods.unfreeze(web3.utils.toWei(unStakeAmount)).send({from: personalAccount}).then(function(tx){
-        if(tx){
-            alert("Successfully Unstaked!\nTransaction Hash: " + tx);
-        }
+      if(tx){
+          alert("Successfully Unstaked!\nTransaction Hash: " + tx.transactionHash);
+          console.log('tx is', tx.transactionHash)
+      }
     }).catch((err)=>{
         alert("Transaction Failed!")
     })
@@ -507,7 +507,7 @@ export function transferToken(){
     console.log(stakeAmount);
     contract.methods.transfer(addresstoSend, web3.utils.toWei(amountToSend) ).send({from: personalAccount}).then(function(tx){
     if(tx){
-        alert("Successfully Transfered!\nTransaction Hash: " + tx);
+        alert("Successfully Transfered!\nTransaction Hash: " + tx.transactionHash);
     }
     }).catch((err)=>{
         alert("Transaction Failed!")

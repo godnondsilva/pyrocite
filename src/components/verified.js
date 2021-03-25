@@ -99,7 +99,7 @@ const Verified = () => {
           <Button href="https://bscscan.com/">Smart Contract</Button>
         </LeftContainer>
         <ItemContainer>
-          <Title newspaper={true}>Newspaper</Title>
+          <Title newspaper={true}>Whitepaper</Title>
           <Subtitle>
             <FontAwesomeIconContainer icon={["fas", "check-circle"]} size="2x" />
             General Functionality

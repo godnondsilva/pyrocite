@@ -95,8 +95,8 @@ const Verified = () => {
       <FlexContainer>
         <LeftContainer>
           <Title>PYROC is Verified.</Title>
-          <Subtitle>Below is the verified smart contract on Etherscan. PYROC code has been audited and can only use the functions found within the contract.</Subtitle>
-          <Button href="https://bscscan.com/">Smart Contract</Button>
+          <Subtitle>Below is the verified smart contract on Binance Smart Chain. PYROC code has been audited and can only use the functions found within the contract.</Subtitle>
+          <Button href="https://bscscan.com/token/0xd0f6e96abfe9d41ee104a72b8f51f4ffaa90d378">Smart Contract</Button>
         </LeftContainer>
         <ItemContainer>
           <Title newspaper={true}>Whitepaper</Title>
@@ -124,7 +124,7 @@ const Verified = () => {
             <FontAwesomeIconContainer icon={["fas", "check-circle"]} size="2x" />
             Further Development
           </Subtitle>
-          <Button whitepaper={true} href="https://bscscan.com/">Whitepaper</Button>
+          <Button whitepaper={true} href="">Whitepaper</Button>
         </ItemContainer>
       </FlexContainer>
     </VerifiedContainer>

@@ -78,8 +78,8 @@ const Distribution = () => {
                     <FontAwesomeIconContainer icon={["fab", "telegram"]} size="3x" />
                 </IconData>
             </IconContainer>
-            <Title>We are distributed</Title>
-            <Subtitle>We take pride in the project and community. We want to provide the best experience and platform possible.</Subtitle>
+            <Title>We are dedicated</Title>
+            <Subtitle>We take pride in the project and community. We want to provide the best experience and platform possible. Stay tuned for further development from our team!</Subtitle>
         </Container>
     </DistributionContainer>
   )

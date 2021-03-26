@@ -117,10 +117,10 @@ const LowerWallet = () => {
           <Button onClick={stakeAmount}>Stake PYROC</Button>
         </ItemContainer>
         <ItemContainer>
-          <Title>UnStake PYROC</Title>
-          <Subtitle>10% Stake Distribution (5% to Current Stakers, 5% Burn Rate)</Subtitle>
-          <InputField id="unstakeAmount" placeholder="Amount of PYROC to UnStake"></InputField>
-          <Button onClick={UnstakeAmount}>UnStake PYROC</Button>
+          <Title>Unstake PYROC</Title>
+          <Subtitle>10% Unstake fee all distributed to stakers</Subtitle>
+          <InputField id="unstakeAmount" placeholder="Amount of PYROC to Unstake"></InputField>
+          <Button onClick={UnstakeAmount}>Unstake PYROC</Button>
         </ItemContainer>
       </FlexContainer>
       <FlexContainer>

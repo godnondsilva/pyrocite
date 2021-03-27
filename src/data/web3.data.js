@@ -419,7 +419,7 @@ export async function getData() {
          tokenAmount = e/1000000;
         tokenAmount = tokenAmount/1000000;
         tokenAmount = tokenAmount/1000000;
-        tokenAmount = tokenAmount.toFixed(1)
+        tokenAmount = getOneDecimal(tokenAmount)
         console.log(tokenAmount + "Token Amount");
         document.getElementById("tokenBalance").innerHTML = tokenAmount;
         // document.getElementById("totalValue").innerHTML = tokenAmount * 0.007 + "$";
@@ -431,7 +431,7 @@ export async function getData() {
         var totalFrozen = e/1000000;
         totalFrozen = totalFrozen/1000000;
         totalFrozen = totalFrozen/1000000;
-        document.getElementById("totalFrozenAmount").innerHTML = totalFrozen.toFixed(1);
+        document.getElementById("totalFrozenAmount").innerHTML = getOneDecimal(totalFrozen);
       }
     })
     contract.methods.totalFrozen().call({from:personalAccount}).then(function(e){
@@ -439,7 +439,7 @@ export async function getData() {
         var totalFrozen = e/1000000;
         totalFrozen = totalFrozen/1000000;
         totalFrozen = totalFrozen/1000000;
-        document.getElementById("totalStakedPYROC").innerHTML = totalFrozen.toFixed(1);
+        document.getElementById("totalStakedPYROC").innerHTML = getOneDecimal(totalFrozen);
       }
     })
     contract.methods.totalSupply().call({from:personalAccount}).then(function(e){
@@ -447,7 +447,7 @@ export async function getData() {
         var totalFrozen = e/1000000;
         totalFrozen = totalFrozen/1000000;
         totalFrozen = totalFrozen/1000000;
-        document.getElementById("totalCirculating").innerHTML = totalFrozen.toFixed(1);
+        document.getElementById("totalCirculating").innerHTML = getOneDecimal(totalFrozen);
       }
     })
     contract.methods.dividendsOf(personalAccount).call({from: personalAccount, gas: 210000}).then(function(e){
@@ -455,7 +455,7 @@ export async function getData() {
           var stakeTokenClaim = e/1000000;
           stakeTokenClaim = stakeTokenClaim/1000000;
           stakeTokenClaim = stakeTokenClaim/1000000;
-        document.getElementById("dividendsAmount").innerHTML = stakeTokenClaim.toFixed(1);
+        document.getElementById("dividendsAmount").innerHTML = getOneDecimal(stakeTokenClaim);
       }
     })
   
@@ -512,4 +512,8 @@ export function transferToken(){
     }).catch((err)=>{
         alert("Transaction Failed!")
     })
+}
+
+function getOneDecimal(value) {
+  return value.toString().match(/^-?\d+(?:\.\d{0,1})?/)
 }

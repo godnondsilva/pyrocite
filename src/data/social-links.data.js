@@ -1,5 +1,5 @@
 const SocialLinks = {
-    Twitter: 'https://twitter.com',
+    Twitter: 'https://t.me/PyroclasticOfficial',
     Telegram: 'https://t.me/PyroclasticOfficial',
 }
 
